@@ -12,7 +12,7 @@ foreach($response["rows"] as $row) {
 	}
 	$current_registrations[$row["realm"]][$row["network_ip"]]++;
 }
-echo "# HELP freeswitch_registations number of current registored devices\n";
+echo "# HELP freeswitch_registations number of current registered devices\n";
 echo "# TYPE freeswitch_registations counter\n";
 if (sizeof($current_registrations) == 0) {
     echo "fusionpbx_registrations{} 0";
